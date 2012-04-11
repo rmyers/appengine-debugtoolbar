@@ -1,0 +1,27 @@
+{% if records %}
+	<table>
+		<thead>
+			<tr>
+				<th>{{ _("Level") }}</th>
+				<th>{{ _("Time") }}</th>
+				<th>{{ _("Channel") }}</th>
+				<th>{{ _("Message") }}</th>
+				<th>{{ _("Location") }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for record in records %}
+				<tr class="{{ loop.cycle('djDebugOdd','djDebugEven') }}">
+					<td>{{ record.level }}</td>
+					<td>{{ record.time }}</td>
+					<td>{{ record.channel }}</td>
+					<td>{{ record.message }}</td>
+					<td>{{ record.file }}:{{ record.line }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% else %}
+	<p>{{ _("No messages logged") }}.</p>
+{% endif %}
+
