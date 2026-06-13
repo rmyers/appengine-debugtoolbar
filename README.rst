@@ -3,7 +3,6 @@ Appengine Debug Toolbar
 
 This is a fork of the awesome django debug toolbar:
 
-
 https://github.com/django-debug-toolbar/django-debug-toolbar
 
 It is designed to work with webapp and jinja the default
