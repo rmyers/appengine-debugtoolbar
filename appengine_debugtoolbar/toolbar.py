@@ -1,11 +1,13 @@
 """
 The main DebugToolbar class that loads and renders the Toolbar.
 """
+
 import os
 import os.path
 
 from django.utils.datastructures import SortedDict
 import logging
+
 
 class DebugToolbar(object):
 
